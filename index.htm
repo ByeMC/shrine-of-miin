@@ -2,10 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="https://render.namemc.com/skin/2d/face.png?skin=c7429f2a11500073&overlay&scale=2" />
     <title>Shrine of Miin</title>
+    <script>
+        function shrineOpen() {
+            document.write('<h1>Welcome to the shrine of MIIN!</h1> <br /> \
+            <b>PRAY FOR YOUR SOUL</b>')
+        }
+
+        function shrineClose() {
+            document.write('<p>... closed... &amp; come back... <b>NEVER</b></p>')
+        }
+
+        function checkTime() {
+            let currentDate = new Date();
+            let time = currentDate.getHours();
+            console.log(time)
+            if (time < 21) {
+                if (time > 7){
+                    shrineOpen();
+                }
+                else {
+                    shrineClose();
+                }
+            }
+            else {
+                shrineClose();
+            }
+        }
+
+        function OpeningHours() {
+            console.log('Opening hours are:')
+            console.log('8 a.m. to 8 p.m.')
+        };
+
+        checkTime();
+    </script>
 </head>
 <body>
-    <P>the shrine of Miin is closed today.</P>
+
 </body>
 </html>
